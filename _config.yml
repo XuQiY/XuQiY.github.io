@@ -74,7 +74,7 @@ netease_comment: false
 ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
 ga_domain: xuqiy.github.io
 
-
+gems: [jekyll-paginate]
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
@@ -100,15 +100,15 @@ page-mathjax: false
 
 
 # Friends
-friends: [
-    {
-    #     title: "Su",
-    #     href: "http://su.gallery/"
-    # },{
-        title: "todolist",
-        href: "http://dengtingting.top:8001/todolist.html"
-    },{
-      title: "baiduwaimai",
-      href: "http://dengtingting.top:8001/baiduwaimai/index.html"
-    }
-]
+# friends: [
+#     {
+#     #     title: "Su",
+#     #     href: "http://su.gallery/"
+#     # },{
+#         title: "todolist",
+#         href: "http://dengtingting.top:8001/todolist.html"
+#     },{
+#       title: "baiduwaimai",
+#       href: "http://dengtingting.top:8001/baiduwaimai/index.html"
+#     }
+# ]
