@@ -1,0 +1,114 @@
+# Site settings
+title: Mr_x Blog
+SEOTitle: 许启的博客 | Mr_x Blog
+header-img: img/home-bg.jpg
+email: m13538955858@gmail.com
+description: "关于程序与设计、黑客与画家 | 许启源，Web & Mobile Lover，Software Engineer，UX Designer | 这里是 @Mr_x 的个人博客，与你一起发现更大的世界。"
+keyword: "x许启源, @mr_X, 许启的博客, Mr_x Blog, 博客, 个人网站, 互联网, Web, JavaScript, 后端, 设计,python,爬虫"
+url: "https://XuQiY.github.io"              # your host, for absolute URL
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+
+# Publish posts or collection documents with a future date.
+future: true
+
+# SNS settings
+RSS: false
+weibo_username:     XuQiYuan01
+zhihu_username:     Mr_XuQ
+github_username:    XuQiY
+twitter_username:   Mr_x
+#facebook_username:  Mr_x
+#linkedin_username:  firstname-lastname-idxxxx
+
+
+
+# Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
+highlighter: rouge
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+# If you have timezone issue (e.g. #68) in China, uncomment to use this:
+#timezone: CN  
+
+
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+# make sure you have this gem installed
+# `$ gem install jekyll-paginate`
+plugins: [jekyll-paginate]
+
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+  syntax_highlighter_opts:
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+
+
+# Disqus settings
+disqus_username: Mr_x
+
+# Netease settings
+netease_comment: false
+
+
+
+# Analytics settings
+# Baidu Analytics 
+# ba_track_id: [your track id]
+
+# Google Analytics
+ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+ga_domain: xuqiy.github.io
+
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "能用JS解决的地方最终还是会用JS解决<br/> smile！"
+sidebar-avatar: /img/avatar-Mr_x-ny.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
+
+
+
+# MathJax rendering for layout:page (e.g. post preview)
+page-mathjax: false
+
+
+# Friends
+friends: [
+    {
+    #     title: "Su",
+    #     href: "http://su.gallery/"
+    # },{
+        title: "todolist",
+        href: "http://dengtingting.top:8001/todolist.html"
+    },{
+      title: "baiduwaimai",
+      href: "http://dengtingting.top:8001/baiduwaimai/index.html"
+    }
+]

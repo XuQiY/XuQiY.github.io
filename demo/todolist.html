@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/vue-2.4.0.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap-3.3.7.css">
+    <title>todolist</title>
+</head>
+
+<body>
+    <div id="app-1">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">todolist</h3>
+            </div>
+            <div class="panel-body form-inline">
+                <label for="">ID</label>
+                <input v-model="id" type="text" class="form-control " id="id" placeholder="id">
+                <label for="">todo</label>
+                <input v-model="name" type="text" class="form-control" id="value" placeholder="todo">
+                <button type="submit" class="btn btn-primary" @click="add()">添加</button>
+                <input v-model="keyword" type="text" @keyup="search" placeholder="请输入要查找的事项">
+
+            </div>
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>todo</th>
+                        <th>time</th>
+                        <th>del</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(item, index) in todolist" :key="index" name="item">
+                        <td>{{item.id}}</td>
+                        <td>{{item.todo}}</td>
+                        <td>{{item.ctime}}</td>
+                        <td @click="del(item.id)">
+                            <button type="button" class="btn btn-xs btn-primary">del</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+
+
+    </div>
+    <script>
+        var vm = new Vue({
+            el: '#app-1',
+            data: {
+                todolist: [{
+                    id: 1,
+                    todo: "run",
+                    ctime: new Date()
+                }],
+                id: "",
+                name: "",
+                keyword: ""
+            },
+            methods: {
+                del(id) {
+                    console.log(id)
+                    let index = this.todolist.findIndex(item => {
+                        if (item.id == id) return true;
+                    })
+                    this.todolist.splice(index, 1)
+                },
+                add() {
+                    const tag = 0;
+                    if (this.id == "") {
+                        alert("请输入id");
+                        return;
+                    }
+                    if (this.name == "") {
+                        alert("请输入todo");
+                        return;
+                    }
+                    this.todolist.map((todo) => {
+                        if (todo.id == this.id) {
+                            alert("id已经存在");
+                            tag = 1;
+                        }
+                    })
+                    if (tag) return;
+                    var todo = {
+                        id: this.id,
+                        todo: this.name,
+                        ctime: new Date()
+                    }
+                    this.todolist.push(todo);
+                    this.name = this.id = ""
+                },
+                search() {
+                    if (this.keyword == "") return;
+                    console.log(this.keyword)
+                    var list = document.getElementsByName("item")
+                    this.todolist.map(item => {
+                        if (item.todo.includes(this.keyword)) list[this.todolist.indexOf(item)].style.backgroundColor = 'red';
+                        else list[this.todolist.indexOf(item)].style.backgroundColor = '#fff';
+                        console.log(list[this.todolist.indexOf(item)].style.backgroundColor)
+                    })
+                    console.log(this.keyword)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+---
+layout:     post
+title:      "爬虫(Spider)"
+subtitle:   " \"正则表达式\""
+date: "2018-11-20 21:55"
+author:     "Mrx"
+header-img: "img/post-bg-2018-11-20.jpg"
+catalog: true
+tags:
+    - 学习
+    - Regex
+    - python
+---
+
+> ”You build it , You run it.”
+
+## 爬虫(spider)
+学爬虫的起因源于Google的一款插件Momentum，个人十分喜欢它的背景，所以每天都要翻网页源代码在一堆标签中找到那个background~再把它img-url打开再右键保存。秉着能 ***少动手*** 就少动手的原则,于是开始了学习爬虫的道路~
+
+
+## urllib2
+学校并没有爬虫这门课，只能自己上网找找了。在MOOC上找到了门爬虫基础课，看了几节发觉python果然没让我失望,学起爬虫简直不要太顺畅,只是课程比较旧，用的是py2，所以开始在urllib2这个库上折腾了一会，在***py3***中urllib2被合并到urllib.request中了。在其中还能复习下计算机网络的HTTP/HTTPS的请求和响应~
+
+
+
+## 正则表达式(Regex)
+学爬虫学着学着被正则表达式给卡住了,半途而废可不是我的风格，***you can do it*** 刚好爬虫的基础课中有教，又开始新一轮奋战。正则还真的是门好东西,在数据处理方面简直是大杀器。python中有内置的正则表达式 ***re*** 模块,了解了规则用起来也是得心应手,只是这门内功得多用多练才行~
+
+
+
+## 后记
+功夫不负有心人~ *[这是代码](https://github.com/XuQiY/homework/blob/master/python/%E7%88%AC%E8%99%AB/%E8%87%AA%E5%8A%A8%E7%88%ACmomentum%E5%A3%81%E7%BA%B8.py)*<br/> 再也不用傻傻的点开发者工具了~ <br/>
+—— Mrx 后记于 2018.10
